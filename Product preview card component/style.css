@@ -1,0 +1,153 @@
+/* Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:ital,wght@0,700;1,500&display=swap");
+/* General styles */
+:root {
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-fraunces: "Fraunces", serif;
+
+  --background-color: hsl(30, 38%, 92%);
+  --container-background: hsl(0, 0%, 100%);
+  --container-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  --text-color: hsl(228, 12%, 48%);
+  --heading-color: hsl(212, 21%, 14%);
+  --primary-color: hsl(158, 36%, 37%);
+  --button-background: hsl(158, 36%, 37%);
+  --button-hover-background: hsl(159, 97%, 12%);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  background-color: var(--background-color);
+}
+
+/* Container */
+.container {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  background-color: var(--container-background);
+  border-radius: 10px;
+  box-shadow: var(--container-shadow);
+  padding: 30px;
+  text-align: center;
+}
+
+.title {
+  position: absolute;
+  top: 10px;
+  font-family: var(--font-montserrat);
+  color: var(--text-color);
+  opacity: 0.5;
+  font-weight: 500;
+}
+
+h1 {
+  text-align: start;
+  font-family: var(--font-fraunces);
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--heading-color);
+  width: 80%;
+}
+
+.describtion {
+  text-align: start;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text-color);
+  font-family: var(--font-montserrat);
+  opacity: 0.7;
+}
+
+.price-after {
+  text-align: start;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: var(--font-fraunces);
+}
+
+.price-before {
+  position: absolute;
+  bottom: 22%;
+  left: 55%;
+  color: var(--text-color);
+}
+.mobile-img {
+  display: none;
+}
+.desktop-img {
+  width: 260px;
+  height: 410px;
+  border-radius: 25px 0px 0px 25px;
+  padding-left: 20px;
+  background-image: cover;
+}
+
+/* Button */
+.button {
+  position: absolute;
+  display: inline-block;
+  padding: 10px 20px;
+  left: 15%;
+  right: 15%;
+  bottom: 5%;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--button-hover-background);
+  left: 12%;
+  right: 12%;
+}
+.button img {
+  position: absolute;
+  bottom: 30%;
+  left: 28%;
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    top: 230px;
+    width: 340px;
+  }
+
+  .desktop-img {
+    display: none;
+  }
+  .mobile-img {
+    display: block;
+    position: absolute;
+    height: 320px;
+    width: 400px;
+    padding: 10px;
+    border-radius: 20px 20px 0px 0px;
+    top: 7%;
+    z-index: 1;
+  }
+  .describtion {
+    line-height: 25px;
+  }
+  .price-after {
+    font-size: 35px;
+  }
+  .price-before {
+    font-size: 20px;
+    bottom: 25%;
+  }
+  h1 {
+    width: 100%;
+  }
+}
